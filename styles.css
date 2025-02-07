@@ -1,0 +1,130 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: radial-gradient(circle, #0d0d0d, #000);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Animation */
+body::before {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.1), transparent);
+  animation: moveBackground 8s infinite linear;
+  z-index: -1;
+}
+
+@keyframes moveBackground {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Full-width error container */
+#error-container {
+  width: 100%;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* Wrapper for both divs to align them properly */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
+  max-width: 1000px;
+  margin-top: 70px;
+}
+
+/* Ensure both divs have the same size */
+.container {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  width: 48%;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Floating Dots Background */
+body::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: floatingDots 5s infinite;
+}
+
+@keyframes floatingDots {
+  0% { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+  50% { transform: translate(-50%, -50%) scale(2); opacity: 0.5; }
+  100% { transform: translate(-50%, -50%) scale(3); opacity: 0; }
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-align: center;
+}
+
+/* Futuristic Buttons */
+.btn {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
