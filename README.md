@@ -162,5 +162,13 @@ Contributions are welcome! If you'd like to improve this project, feel free to f
 4. Push the branch (`git push origin feature-branch`)
 5. Submit a pull request
 
+---
 
+## License
+This project is licensed under the **MIT License**.
+
+---
+
+## Contact
+📧 Email: sarthakb675@gmail.com  
 
